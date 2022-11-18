@@ -10,13 +10,13 @@
 
 .light {
     --bg-color: #fafafa;
-    --secondary-bg-color: white;
+    --primary-bg-color: white;
     --text-color: black;
 }
 
 .dark {
-    --bg-color: #212e37;
-    --secondary-bg-color: #2b3743;
+    --bg-color: #343c42;
+    --primary-bg-color: #1d262e;
     --text-color: white;
 }
 
@@ -39,8 +39,8 @@ button {
     left: 0;
     right: 0;
     height: 75px;
-    box-shadow: 0px 2px 10px 3px rgba(0, 0, 0, 0.2);
-     background-color: var(--secondary-bg-color);
+    box-shadow: 0px 2px 5px 3px rgba(0, 0, 0, 0.2);
+    background-color: var(--secondary-bg-color);
     color: var(--text-color);
     z-index: 3;
 }
@@ -52,7 +52,68 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
 
+}
+
+/*Theme Toggle*/
+.toggle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    color: hsl(228, 12%, 44%);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    min-width: 58px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsla(230, 22%, 74%, 0.300);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: 0.1s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    background-color: hsla(230, 24%, 34%, 0.603);
+    transition: 0.1s;
+    border-radius: 11px;
+}
+
+input:checked+.slider {
+    background: rgba(55, 142, 230, 0.5);
+    background: linear-gradient(90deg, #378fe6 100%, #2441c7 0%);
+}
+
+input:checked+.slider:before {
+    background-color: hsl(230, 24%, 34%);
+    transform: translateX(28px);
 }
 
 
@@ -72,4 +133,5 @@ button {
 .main {
     width: 100%;
     max-width: 1440px;
+    padding: 0 20px;
 }
