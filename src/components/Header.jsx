@@ -8,7 +8,7 @@ export default function Header() {
     return (
         <div className={'header-container ' + state.theme}>
 
-            <div className="header">
+            <header className="header">
 
                 <div className="left">
                     <h2>Header</h2>
@@ -25,7 +25,7 @@ export default function Header() {
                     </div>
 
                 </div>
-            </div>
+            </header>
         </div>
     )
 }
