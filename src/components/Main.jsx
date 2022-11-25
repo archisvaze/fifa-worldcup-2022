@@ -41,15 +41,10 @@ export default function Main() {
     }
 
     useEffect(() => {
-        setmatches(matchesData.data)
-        setstandings(standingsData.data)
-        console.log(standingsData.data)
         getTodaysMatches();
-
         setTimeout(() => {
             getStandings();
         }, 3000)
-
         // eslint-disable-next-line
     }, [])
 
