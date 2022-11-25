@@ -20,7 +20,7 @@ export default function Main() {
 
     const getTodaysMatches = () => {
         setloading1(true);
-        fetch("http://localhost:8000/today")
+        fetch("https://fifa-server.onrender.com/today")
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -31,7 +31,7 @@ export default function Main() {
 
     const getStandings = () => {
         setloading2(true);
-        fetch("http://localhost:8000/standings")
+        fetch("https://fifa-server.onrender.com/standings")
             .then(res => res.json())
             .then(data => {
                 console.log(data);

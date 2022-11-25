@@ -3,7 +3,7 @@ import React from 'react'
 export default function Team(props) {
     let obj = props.obj;
     return (
-        <div className='team'>
+        <div tabIndex={0} className='team'>
             <div className="team-left">
                 <img src={obj.flag} alt="flag" />
                 <p>{obj.name_en}</p>

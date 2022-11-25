@@ -11,7 +11,7 @@ export default function Match(props) {
     
     let obj = props.obj;
     return (
-        <div className='match'>
+        <div tabIndex={0} className='match'>
             <p className='group'>Group {obj.group}</p>
             <div className="match-flags-container">
                 <div className="team-container">
