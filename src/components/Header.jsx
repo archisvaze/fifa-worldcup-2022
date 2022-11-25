@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from "../slices/mySlice"
 
+
 export default function Header() {
     const dispatch = useDispatch();
     const state = useSelector(state => state.myState)
@@ -11,7 +12,7 @@ export default function Header() {
             <header className="header">
 
                 <div className="left">
-                    <h2>Header</h2>
+                    <h3>FIFA World Cup 2022</h3>
                 </div>
 
                 <div className="right">
