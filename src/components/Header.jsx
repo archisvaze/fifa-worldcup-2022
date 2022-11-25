@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from "../slices/mySlice"
+import Toggle from './Toggle';
 
 
 export default function Header() {
@@ -17,13 +18,7 @@ export default function Header() {
 
                 <div className="right">
 
-                    <div className="toggle-container">
-                        <label className="switch">
-                            <input type="checkbox"
-                                onClick={() => dispatch(toggleTheme())} />
-                            <span className="slider"></span>
-                        </label>
-                    </div>
+                    <Toggle />
 
                 </div>
             </header>

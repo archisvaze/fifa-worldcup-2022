@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 let initialState = {};
 initialState = {
-    theme: "light",
+    theme: "dark",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzdhZTU0YmZkOWFhYzIyNjc3N2U0OTIiLCJpYXQiOjE2Njg5OTg1MDAsImV4cCI6MTY2OTA4NDkwMH0.37HmVEIMUuhxfNvctOaUliuIO1HgP7CmPty2G0SUxHA",
 };
 
