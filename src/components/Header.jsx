@@ -1,11 +1,9 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux';
-import { toggleTheme } from "../slices/mySlice"
+import { useSelector } from 'react-redux';
 import Toggle from './Toggle';
 
 
 export default function Header() {
-    const dispatch = useDispatch();
     const state = useSelector(state => state.myState)
     return (
         <div className={'header-container ' + state.theme}>

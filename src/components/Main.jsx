@@ -2,8 +2,6 @@ import React from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import matchesData from "../matches.json"
-import standingsData from "../standings.json"
 import Loading from './Loading';
 import Match from './Match';
 import Standing from './Standing';
@@ -24,8 +22,10 @@ export default function Main() {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                setmatches(data.data);
-                setloading1(false);
+                if (data.data) {
+                    setmatches(data.data);
+                    setloading1(false);
+                }
             })
     }
 
@@ -35,16 +35,16 @@ export default function Main() {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                setstandings(data.data);
-                setloading2(false);
+                if (data.data) {
+                    setstandings(data.data);
+                    setloading2(false);
+                }
             })
     }
 
     useEffect(() => {
         getTodaysMatches();
-        setTimeout(() => {
-            getStandings();
-        }, 3000)
+        getStandings();
         // eslint-disable-next-line
     }, [])
 
@@ -53,21 +53,21 @@ export default function Main() {
             <div className="main">
                 <h2>Today's Matches {loading1 === true ? <Loading /> : <></>}</h2>
                 <div className="matches-container">
-                    {matches.map(obj => {
+                    {matches ? matches.map(obj => {
                         return (
                             <Match key={obj._id} obj={obj} />
                         )
-                    })}
+                    }) : <></>}
                 </div>
 
                 <h2>Standings {loading2 === true ? <Loading /> : <></>}</h2>
 
                 <div className="standing-container">
-                    {standings.map(obj => {
+                    {standings ? standings.map(obj => {
                         return (
                             <Standing key={obj._id} obj={obj} />
                         )
-                    })}
+                    }) : <></>}
                 </div>
 
             </div>
