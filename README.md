@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# FIFA app that shows todays matches and latest standings.
+## Server is hosted on render so may take 2-3 mins to boot up.
+
+Link: https://reactfifa.netlify.app/
+
+![Screenshot 2022-12-10 101657](https://user-images.githubusercontent.com/92965519/206829678-186ba59b-58fb-4ef6-a8ee-b92387ea6aa4.png)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
